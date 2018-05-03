@@ -1,5 +1,8 @@
-backend: 
-  name: test-repo
+backend:   
+  delay: 0.1
+  name: bitbucket
+  repo: MeXaaR/f5communication
+  base_url: https://netlify-bitbucket-oauth.now.sh
 
 media_folder: static/assets
 
