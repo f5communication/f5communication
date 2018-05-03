@@ -15,20 +15,23 @@ const IndexPage = ({ data }) => {
   const { 
     background,
     firstSection,
-    secondSection
+    secondSection,
+    thirdSection
   } = data
-  console.log(data)
+
   return(
     <div>
       <Helmet>
         <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Social media & événementiel - Communication à Toulouse, Paris & ailleurs</title>
+        <meta name="description" content="L'agence f5 communication est un collectif de passionnés indépendant proposant des services de communication digitale, community management et événementiel à Toulouse et Paris." />
         <link rel="icon" href="/images/favicon.png"/>
       </Helmet>
       <Landing background={data.background.sizes} />
       <FirstSection texts={firstSection}/>
       <SecondSection texts={secondSection}/>
-      <ThirdSection />
+      <ThirdSection texts={thirdSection} />
       <TeamSection />
       <Contact />
       <Footer />
@@ -69,6 +72,11 @@ export const query = graphql`
           title
           subtitle
           image
+        }
+        thirdSection: contentYaml(id: { regex: "/third/" }) {
+          id
+          title
+          subtitle
         }
       }
 `

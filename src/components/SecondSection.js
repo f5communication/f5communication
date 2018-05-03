@@ -22,7 +22,7 @@ const SecondSection = ({ texts }) => (
             <Grid.Column width={8}>
                 <Fade right>
                     <div className="image-wrapper">
-                        <Image src={ texts.image } className="collectif" alt={images.collectif} />
+                        <Image src="/assets/collectif.jpg" className="collectif" alt={images.collectif} />
                     </div>
                 </Fade>
             </Grid.Column>

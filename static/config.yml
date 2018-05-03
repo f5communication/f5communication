@@ -3,6 +3,7 @@ backend:
   repo: MeXaaR/f5communication
 
 media_folder: static/assets
+public_folder: /assets
 
 collections: 
   - name: content
@@ -28,3 +29,16 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Text, name: subtitle, widget: markdown}
           - {label: Image, name: image, widget: image}
+      - label: Third Section
+        name: thirdsection
+        file: src/content/thirdsection.yml
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Text, name: subtitle, widget: markdown}
+          - label: Partners
+            name: partners
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: URL, name: url, widget: string}
+              - {label: Logo, name: logo, widget: image}
