@@ -12,9 +12,7 @@ const FirstSection = ({ texts = {} }) => {
                   <Fade up>
                   <Header as='h1' textAlign='center' >
                       {texts.title}
-                      <Header.Content>
-                      {texts.subtitle}
-                      </Header.Content>
+                      <Header.Content dangerouslySetInnerHTML={{__html: texts.subtitle}} />
                   </Header>
                   </Fade>
                   </Grid.Column>

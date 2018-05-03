@@ -1,4 +1,4 @@
-backend:   
+backend:
   name: github
   repo: MeXaaR/f5communication
 
@@ -9,26 +9,6 @@ collections:
   - name: content
     label: Content
     files:
-      - label: First Section
-        name: firstsection
-        file: src/content/firstsection.yml
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Text, name: subtitle, widget: markdown}
-          - label: Skills
-            name: cards
-            widget: list
-            fields:
-              - {label: Icon, name: icon, widget: string}
-              - {label: Title, name: title, widget: string}
-              - {label: Content, name: content, widget: string}
-      - label: Second Section
-        name: secondsection
-        file: src/content/secondsection.yml
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Text, name: subtitle, widget: markdown}
-          - {label: Image, name: image, widget: image}
       - label: Third Section
         name: thirdsection
         file: src/content/thirdsection.yml
@@ -42,3 +22,23 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: URL, name: url, widget: string}
               - {label: Logo, name: logo, widget: image}
+      - label: Second Section
+        name: secondsection
+        file: src/content/secondsection.yml
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Text, name: subtitle, widget: markdown}
+          - {label: Image, name: image, widget: image}
+      - label: First Section
+        name: firstsection
+        file: src/content/firstsection.yml
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Text, name: subtitle, widget: markdown}
+          - label: Skills
+            name: cards
+            widget: list
+            fields:
+              - {label: Icon, name: icon, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: string}

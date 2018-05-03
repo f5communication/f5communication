@@ -5,12 +5,13 @@ import Fade from "react-reveal/Fade"
 
 import { images } from "./datas"
 
-const SecondSection = () => {
+const ThirdSection = ({ texts = {} }) => {
 
     let mainIdx = -1
     const IMAGE_PER_ROW = 4
+    const { partners = [] } = texts
 
-    const result = texts.partners.reduce((accumulateur, valeurCourante, index) => {
+    const result = partners.reduce((accumulateur, valeurCourante, index) => {
         const accLength = accumulateur.length
         const nestedIndex =  index % IMAGE_PER_ROW
         if(nestedIndex === 0){
@@ -33,12 +34,10 @@ const SecondSection = () => {
               <Grid centered stackable >
                   <Grid.Column width={8}>
                   <Fade left>
-                      <Header as='h1' >
+                      <Header as='h1'>
                           {texts.title}
                       </Header>
-                      <p className="content">
-                          {texts.subtitle}
-                      </p>
+                      <p className="content" dangerouslySetInnerHTML={{__html: texts.subtitle}}/>
                     </Fade>
                   </Grid.Column>
                   <Grid.Column width={8}>
@@ -64,7 +63,7 @@ const SecondSection = () => {
       )
 }
 
-export default SecondSection
+export default ThirdSection
 
 
 const SectionWrapper = styled.div`
@@ -122,29 +121,3 @@ background-color: #fff;
         opacity: 1;
     }
 `
-
-const texts = {
-    title: "Nos heureux collaborateurs",
-    subtitle: `
-    TPE, PME, association ou startup, nous 
-    accompagnons des organisations de tous 
-    types et de secteurs d’acvitiés variés 
-    tels que le numérique, l’innovation, 
-    l’entreprenariat, l’énergie, l’environnement, 
-    l’emploi…`,
-    partners: [
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-        { logo: "http://f5communication.com/wp-content/uploads/2018/04/cropped-7.jpg", name: "La Mêlée", url: "https://mexar.fr" },
-    ]
-
-}

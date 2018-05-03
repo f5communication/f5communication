@@ -14,9 +14,7 @@ const SecondSection = ({ texts }) => (
                 <Header as='h1' >
                     {texts.title}
                 </Header>
-                <p className="content">
-                    {texts.subtitle}
-                </p>
+                <p className="content" dangerouslySetInnerHTML={{__html: texts.subtitle}}/>
             </Fade>
             </Grid.Column>
             <Grid.Column width={8}>
