@@ -3,51 +3,56 @@ import { Header, Container, Grid, Segment, Icon, Card, Image } from "semantic-ui
 import styled from "styled-components";
 import Fade from "react-reveal/Fade"
 
-const TeamSection = ({ texts }) => (
-  <SectionWrapper>
-      <Container>
-        <Grid centered stackable stretched>
-            <Grid.Column width={16}>
-            <Fade up>
-            <Header as='h1' textAlign='center' >
-                {texts.title}
-                <Header.Content>
-                {texts.subtitle}
-                </Header.Content>
-            </Header>
-            </Fade>
-            </Grid.Column>
-            { texts.members.map((member, i) => (
-                <Grid.Column width={5} key={i} >
-                <Fade up>
-                      <Card>
-                        <Image src={member.image} />
-                        <Card.Content>
-                        <Card.Header style={{marginBottom: 15 }} >
-                            {member.name}
-                        </Card.Header>
-                        <Card.Meta>
-                            <span className='date'>
-                            {member.title}
-                            </span>
-                        </Card.Meta>
-                        </Card.Content>
-                        <Card.Content extra>
-                            <a href={member.twitter} target="_blank">
-                                <Icon name='twitter square' size="large" />
-                            </a>
-                            <a href={member.linkedin} target="_blank">
-                                <Icon name='linkedin square' size="large" />
-                            </a>
-                        </Card.Content>
-                    </Card>
-            </Fade>
-                </Grid.Column>
-            ))}
-        </Grid>
-      </Container>
-  </SectionWrapper>
-)
+const TeamSection = ({ texts = {} }) => {
+
+    const { members = [] } = texts
+
+    return (
+        <SectionWrapper>
+            <Container>
+              <Grid centered stackable stretched>
+                  <Grid.Column width={16}>
+                  <Fade up>
+                  <Header as='h1' textAlign='center' >
+                      {texts.title}
+                      <Header.Content>
+                      {texts.subtitle}
+                      </Header.Content>
+                  </Header>
+                  </Fade>
+                  </Grid.Column>
+                  { members && members.map((member, i) => (
+                      <Grid.Column width={5} key={i} >
+                      <Fade up>
+                            <Card>
+                              <Image src={member.image} />
+                              <Card.Content>
+                              <Card.Header style={{marginBottom: 15 }} >
+                                  {member.name}
+                              </Card.Header>
+                              <Card.Meta>
+                                  <span className='date'>
+                                  {member.title}
+                                  </span>
+                              </Card.Meta>
+                              </Card.Content>
+                              <Card.Content extra>
+                                  <a href={member.twitter} target="_blank">
+                                      <Icon name='twitter square' size="large" />
+                                  </a>
+                                  <a href={member.linkedin} target="_blank">
+                                      <Icon name='linkedin square' size="large" />
+                                  </a>
+                              </Card.Content>
+                          </Card>
+                  </Fade>
+                      </Grid.Column>
+                  ))}
+              </Grid>
+            </Container>
+        </SectionWrapper>
+      )
+}
 
 export default TeamSection
 
