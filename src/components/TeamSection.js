@@ -3,7 +3,7 @@ import { Header, Container, Grid, Segment, Icon, Card, Image } from "semantic-ui
 import styled from "styled-components";
 import Fade from "react-reveal/Fade"
 
-const TeamSection = () => (
+const TeamSection = ({ texts }) => (
   <SectionWrapper>
       <Container>
         <Grid centered stackable stretched>
@@ -17,7 +17,7 @@ const TeamSection = () => (
             </Header>
             </Fade>
             </Grid.Column>
-            { members.map((member, i) => (
+            { texts.members.map((member, i) => (
                 <Grid.Column width={5} key={i} >
                 <Fade up>
                       <Card>
@@ -48,36 +48,6 @@ const TeamSection = () => (
       </Container>
   </SectionWrapper>
 )
-
-
-const texts = {
-    title: "La Team",
-    subtitle: `
-    Nous sommes avant tout un duo de communicantes 
-    composé de professionnalisme, d’expériences et 
-    d’un brin de folie accompagnées d’un réseau composé 
-    de designers, développeurs et community managers. 
-    Notre objectif est de mettre à votre disposition 
-    notre expertise et celle de l’écosystème qui nous entoure, 
-    pour vous proposer les solutions les mieux adaptées 
-    à vos envies.`
-}
-const members = [
-    {
-        image: "http://f5communication.com/wp-content/uploads/2018/02/cropped-DSC0800-1.jpg",
-        name: "Margaux Armendariz",
-        title: "Co-fondatrice & Chef de projet événementiel",
-        twitter: "https://twitter.com/margaux_az",
-        linkedin: "https://www.linkedin.com/in/margauxarmendariz"
-    },
-    {
-        image: "http://f5communication.com/wp-content/uploads/2018/02/cropped-DSC0800-1.jpg",
-        name: "Margaux Armendariz",
-        title: "Co-fondatrice & Chef de projet événementiel",
-        twitter: "https://twitter.com/margaux_az",
-        linkedin: "https://www.linkedin.com/in/margauxarmendariz"
-    },
-]
 
 export default TeamSection
 

@@ -16,8 +16,11 @@ const IndexPage = ({ data }) => {
     background,
     firstSection,
     secondSection,
-    thirdSection
+    thirdSection,
+    teamSection
   } = data
+
+  console.log(thirdSection)
 
   return(
     <div>
@@ -32,7 +35,7 @@ const IndexPage = ({ data }) => {
       <FirstSection texts={firstSection}/>
       <SecondSection texts={secondSection}/>
       <ThirdSection texts={thirdSection} />
-      <TeamSection />
+      <TeamSection texts={teamSection} />
       <Contact />
       <Footer />
     </div>
@@ -58,7 +61,6 @@ export const query = graphql`
           } 
         }
         firstSection: contentYaml(id: { regex: "/first/" }) {
-          id
           title
           subtitle
           cards {
@@ -68,15 +70,30 @@ export const query = graphql`
           }
         }
         secondSection: contentYaml(id: { regex: "/second/" }) {
-          id
           title
           subtitle
           image
         }
         thirdSection: contentYaml(id: { regex: "/third/" }) {
-          id
           title
           subtitle
+          partners {
+            logo
+            name
+            url
+          }
+        }
+
+        teamSection: contentYaml(id: { regex: "/team/" }) {
+          title
+          subtitle
+          members {
+            image
+            name
+            title
+            twitter
+            linkedin
+          }
         }
       }
 `
