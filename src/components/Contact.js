@@ -18,6 +18,7 @@ class Contact extends Component {
 
     render(){
         const { revealed } = this.state;
+        const { texts } = this.props;
         return (
             <SectionWrapper>
                 <div className="title-band">
@@ -31,7 +32,7 @@ class Contact extends Component {
                 <div className="message-band">
                   <Container>
                       <Fade>
-                      <p>{texts.message}</p>
+                      <p>{texts.subtitle}</p>
                       </Fade>
                   </Container>
                 </div>
@@ -44,15 +45,11 @@ class Contact extends Component {
                         <Grid.Column width={8}>
                             <h2><ReactRevealText show={revealed}>{texts.email}</ReactRevealText></h2>
                                 <div className="social">
-                                    <a href={texts.facebook} target="_blank">
-                                        <Icon name='facebook square' size="large" />
+                                { texts.socials && texts.socials.map((social, i) => (
+                                    <a href={social.url} target="_blank">
+                                        <Icon name={social.icon} size="large" />
                                     </a>
-                                    <a href={texts.twitter} target="_blank">
-                                        <Icon name='twitter square' size="large" />
-                                    </a>
-                                    <a href={texts.linkedin} target="_blank">
-                                        <Icon name='linkedin square' size="large" />
-                                    </a>
+                                ))}
                                 </div>
                         </Grid.Column>
                         </Grid>
@@ -62,19 +59,6 @@ class Contact extends Component {
           )
     }
 }
-
-const texts = {
-    title: "Alors, on discute ?",
-    email: "monemaildefoufou@email.com",
-    message: `
-    Pour un renseignement, pour se rencontrer 
-    autour d’un café, pour discuter de vos projets, 
-    ou simplement pour nous envoyer des mots d’amour.`,
-    facebook: "https://twitter.com/margaux_az",
-    twitter: "https://twitter.com/margaux_az",
-    linkedin: "https://www.linkedin.com/in/margauxarmendariz"
-}
-
 export default Contact
 
 const SectionWrapper = styled.div`

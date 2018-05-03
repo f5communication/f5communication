@@ -17,7 +17,8 @@ const IndexPage = ({ data }) => {
     firstSection,
     secondSection,
     thirdSection,
-    teamSection
+    teamSection,
+    contactSection
   } = data
 
   console.log(thirdSection)
@@ -36,7 +37,7 @@ const IndexPage = ({ data }) => {
       <SecondSection texts={secondSection}/>
       <ThirdSection texts={thirdSection} />
       <TeamSection texts={teamSection} />
-      <Contact />
+      <Contact texts={contactSection} />
       <Footer />
     </div>
   )
@@ -93,6 +94,16 @@ export const query = graphql`
             title
             twitter
             linkedin
+          }
+        }
+        contactSection: contentYaml(id: { regex: "/contact/" }) {
+          title
+          subtitle
+          email
+          socials {
+            name
+            icon
+            url
           }
         }
       }
