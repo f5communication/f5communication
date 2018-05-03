@@ -1,8 +1,6 @@
 backend:   
-  delay: 0.1
-  name: bitbucket
+  name: github
   repo: MeXaaR/f5communication
-  base_url: https://netlify-bitbucket-oauth.now.sh
 
 media_folder: static/assets
 
@@ -23,3 +21,10 @@ collections:
               - {label: Icon, name: icon, widget: string}
               - {label: Title, name: title, widget: string}
               - {label: Content, name: content, widget: string}
+      - label: Second Section
+        name: secondsection
+        file: src/content/secondsection.yml
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Text, name: subtitle, widget: markdown}
+          - {label: Image, name: image, widget: image}
