@@ -9,6 +9,20 @@ collections:
   - name: content
     label: Content
     files:
+      - label: Contact Section
+        name: contactsection
+        file: src/content/contactsection.yml
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: subtitle, widget: markdown }
+          - { label: Email, name: email, widget: string }
+          - label: Social Networks
+            name: socials
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Icon, name: icon, widget: string }
+              - { label: URL, name: url, widget: string }
       - label: Team Section
         name: teamsection
         file: src/content/teamsection.yml
