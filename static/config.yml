@@ -1,0 +1,22 @@
+backend: 
+  name: test-repo
+
+media_folder: static/assets
+
+collections: 
+  - name: content
+    label: Content
+    files:
+      - label: First Section
+        name: firstsection
+        file: src/content/firstsection.yml
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Text, name: subtitle, widget: markdown}
+          - label: Skills
+            name: cards
+            widget: list
+            fields:
+              - {label: Icon, name: icon, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: string}
