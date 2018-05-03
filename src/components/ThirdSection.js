@@ -43,8 +43,8 @@ const SecondSection = () => {
                   </Grid.Column>
                   <Grid.Column width={8}>
                   { result.map((array, i) => (
-                        <Fade delay={(i+1) * 500}>
-                      <Image.Group key={i}>
+                        <Fade key={i} delay={(i+1) * 500}>
+                      <Image.Group>
                         { array.map((partner, i2) => (
                           <Image 
                             src={partner.logo} 

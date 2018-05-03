@@ -8,14 +8,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 const Layout = ({ children, data }) => (
     <div>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
-      <Header siteTitle={data.site.siteMetadata.title}  />
+      <Header/>
       <div>
         {children()}
       </div>
@@ -27,13 +20,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

@@ -3,46 +3,48 @@ import { Header, Container, Grid, Segment, Icon } from "semantic-ui-react"
 import styled from "styled-components";
 import Fade from "react-reveal/Fade"
 
-const FirstSection = () => (
-  <SectionWrapper>
-      <Container>
-        <Grid centered stackable stretched>
-            <Grid.Column width={16}>
-            <Fade up>
-            <Header as='h1' textAlign='center' >
-                {texts.title}
-                <Header.Content>
-                {texts.subtitle}
-                </Header.Content>
-            </Header>
-            </Fade>
-            </Grid.Column>
-            { cards.map((card, i) => (
-                <Grid.Column width={5} key={i} >
-                <Fade 
-                    left={i === 0 || i === 3 }
-                    up={i === 1 || i === 4 }
-                    right={i === 2 || i === 5 }
-                >
-                    <div className="single-card">
-                        <Header as='h3' icon textAlign='center'>
-                            <Icon name={card.icon} circular />
-                            <Header.Content>
-                            {card.title}
-                                <Header.Subheader>
-                                    {card.content}
-                                </Header.Subheader>
-                            </Header.Content>
-                        </Header>
-                    </div>
-                </Fade>
-                </Grid.Column>
-            ))}
-        </Grid>
-      </Container>
-  </SectionWrapper>
-)
-
+const FirstSection = ({ texts = {} }) => {
+    return (
+        <SectionWrapper>
+            <Container>
+              <Grid centered stackable stretched>
+                  <Grid.Column width={16}>
+                  <Fade up>
+                  <Header as='h1' textAlign='center' >
+                      {texts.title}
+                      <Header.Content>
+                      {texts.subtitle}
+                      </Header.Content>
+                  </Header>
+                  </Fade>
+                  </Grid.Column>
+                  { texts.cards.map((card, i) => (
+                      <Grid.Column width={5} key={i} >
+                      <Fade 
+                          left={i === 0 || i === 3 }
+                          up={i === 1 || i === 4 }
+                          right={i === 2 || i === 5 }
+                      >
+                          <div className="single-card">
+                              <Header as='h3' icon textAlign='center'>
+                                  <Icon name={card.icon} circular />
+                                  <Header.Content>
+                                  {card.title}
+                                      <Header.Subheader>
+                                          {card.content}
+                                      </Header.Subheader>
+                                  </Header.Content>
+                              </Header>
+                          </div>
+                      </Fade>
+                      </Grid.Column>
+                  ))}
+              </Grid>
+            </Container>
+        </SectionWrapper>
+      )
+      
+}
 export default FirstSection
 
 const SectionWrapper = styled.div`
@@ -123,25 +125,3 @@ background-color: #fff;
         box-shadow: 0 10px 20px rgba(189,189,189,.19), 0 6px 6px rgba(189,189,189,.23);
     }
 `
-
-const texts = {
-    title: "Communication digitale & événementiel",
-    subtitle: "A l’occasion d’une action ponctuelle ou d’un accompagnement sur le long terme, nous mettons notre expertise à disposition pour vous conseiller au mieux et co-créer votre communication, sur mesure, en fonction de vos besoins."
-}
-const cards = [
-    {
-        icon: "leaf",
-        title: "COMMUNICATION",
-        content: "Conseil et stratégie en communication globale | Ligne éditoriale",
-    },
-    {
-        icon: "leaf",
-        title: "COMMUNICATION",
-        content: "Conseil et stratégie en communication globale | Ligne éditoriale | Création de supports print et web en lien avec votre logo et charte graphique",
-    },
-    {
-        icon: "leaf",
-        title: "COMMUNICATION",
-        content: "Conseil et stratégie en communication globale | Ligne éditoriale | Création de supports print et web en lien avec votre logo et charte graphique",
-    }
-]

@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 
 import { images } from "./datas"
 
-const Landing = ({ background}) => (
+const Landing = ({ background }) => (
     <Wrapper>
         <LandingWrapper sizes={background} alt={images.background}  />
     </Wrapper>
