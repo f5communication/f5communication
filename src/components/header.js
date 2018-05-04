@@ -6,9 +6,10 @@ import styled, { keyframes } from 'styled-components';
 import Img from "gatsby-image";
 import logo from "../images/logovert.png"
 import { fadeIn } from 'react-animations';
-
+import smoothscroll from 'smoothscroll-polyfill';
 const fadeInAnimation = keyframes`${fadeIn}`;
 
+smoothscroll.polyfill();
 
 class Header extends Component {
   state = {
@@ -37,7 +38,13 @@ class Header extends Component {
                   <Image src={logo} size={isTop ? null : "small"} />
                 </Menu.Item>
                 { items.map((item, i) =>(
-                  <Menu.Item active={element === item.name} name={item.name} onClick={this.goThere} key={i} position={i === 0 && !isTop ? "right" : null} >
+                  <Menu.Item 
+                    active={element === item.name} 
+                    name={item.name} 
+                    onClick={this.goThere}
+                    key={i} 
+                    position={i === 0 && !isTop ? "right" : null} 
+                  >
                     <span>{item.text}</span>
                   </Menu.Item> ))}
             </Container> 
@@ -56,7 +63,13 @@ class Header extends Component {
                             <Image src={logo} size="small" centered />
                           </Menu.Item>
                           { items.map((item, i) =>(
-                            <Menu.Item name={item.name} onClick={this.goThere} key={i} position={i === 0 && !isTop ? "right" : null} >
+                            <Menu.Item 
+                              active={element === item.name} 
+                              name={item.name} 
+                              onClick={this.goThere}
+                              key={i} 
+                              position={i === 0 && !isTop ? "right" : null} 
+                            >
                               {item.text}
                             </Menu.Item> ))}
                       </Container> 
