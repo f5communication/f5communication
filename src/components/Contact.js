@@ -21,6 +21,9 @@ class Contact extends Component {
         const { texts } = this.props;
         return (
             <SectionWrapper id="Contact">
+                <Waypoint
+                    onEnter={this.toggleVisibility}
+                />  
                 <div className="title-band">
                   <Container>
                         <Slide left>
@@ -36,9 +39,6 @@ class Contact extends Component {
                       </Fade>
                   </Container>
                 </div>
-                <Waypoint
-                    onEnter={this.toggleVisibility}
-                />  
                 <div className="email-band">
                   <Container>
                       <Grid centered stackable>

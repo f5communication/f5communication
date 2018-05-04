@@ -16,6 +16,7 @@ class Header extends Component {
   toggleOpen = () => this.setState({ opened: !this.state.opened })
 
   goThere = (e, { name }) => {
+    e.preventDefault()
     const element = document.getElementById(name);
     const top = element.offsetTop
     window.scrollTo({ top, behavior: "smooth" })
@@ -67,7 +68,7 @@ class Header extends Component {
                               key={i} 
                               position={i === 0 && !isTop ? "right" : null} 
                             >
-                              {item.text}
+                            <span>{item.text}</span>
                             </Menu.Item> ))}
                       </Container> 
                     </Menu>}
