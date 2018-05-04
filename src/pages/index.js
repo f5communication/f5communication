@@ -35,10 +35,12 @@ class IndexPage extends Component {
   activeElement = (element) => this.setState({ element })
 
   render(){
-    const { dimensions = {}, isTop, element } = this.state;
     const { data } = this.props
+    const { dimensions = {}, isTop, element } = this.state;
     const { width, height } = dimensions
     const isMobile = width < 785
+    console.log(width, isMobile)
+
     const { 
       background,
       firstSection,
@@ -91,30 +93,23 @@ class IndexPage extends Component {
             </Helmet>
 
            { width !== -1 && <Header isMobile={isMobile} isTop={isTop} element={element} />}
-            <Waypoint
-              onEnter={this.toggleTop}
-              onLeave={this.toggleTop}
-            />
+            
+            <Waypoint onEnter={this.toggleTop} onLeave={this.toggleTop} />
             <Landing background={background.sizes} />
-            <Waypoint
-              onEnter={() => this.activeElement('First')}
-            />
+            <Waypoint onEnter={() => this.activeElement('First')} />
+
             <FirstSection texts={firstSection}/>
-            <Waypoint
-              onEnter={() => this.activeElement('Second')}
-            />
+            <Waypoint onEnter={() => this.activeElement('Second')}/>
+
             <SecondSection texts={secondSection}/>
-            <Waypoint
-              onEnter={() => this.activeElement('Third')}
-            />
+            <Waypoint onEnter={() => this.activeElement('Third')} />
+
             <ThirdSection texts={thirdSection} />
-            <Waypoint
-              onEnter={() => this.activeElement('Team')}
-            />
+            <Waypoint onEnter={() => this.activeElement('Team')} />
+
             <TeamSection texts={teamSection} />
-            <Waypoint
-              onEnter={() => this.activeElement('Contact')}
-            />
+            <Waypoint onEnter={() => this.activeElement('Contact')} />
+
             <Contact texts={contactSection} />
             <Footer />
           </div>

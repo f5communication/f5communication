@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: MeXaaR/f5communication
+  repo: f5communication/f5communication
 
 media_folder: static/assets
 public_folder: /assets

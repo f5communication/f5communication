@@ -8,6 +8,8 @@ import logo from "../images/logovert.png"
 import { fadeIn } from 'react-animations';
 const fadeInAnimation = keyframes`${fadeIn}`;
 
+import { scrollToY } from './SmoothScroller'
+
 class Header extends Component {
   state = {
     opened: false
@@ -16,16 +18,14 @@ class Header extends Component {
   toggleOpen = () => this.setState({ opened: !this.state.opened })
 
   goThere = (e, { name }) => {
-    e.preventDefault()
-    const element = document.getElementById(name);
-    const top = element.offsetTop
-    window.scrollTo({ top, behavior: "smooth" })
+    scrollToY(name)
     this.setState({ opened: false })
   }
 
   render(){
     const { opened } = this.state;
     const { isMobile, isTop, element } = this.props;
+    console.log(element, opened, isMobile)
 
     return (
       <HeaderWrapper isTop={isTop} className="wrapper">
