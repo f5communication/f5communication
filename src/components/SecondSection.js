@@ -6,7 +6,7 @@ import Fade from "react-reveal/Fade"
 import { images } from "./datas"
 
 const SecondSection = ({ texts }) => (
-  <SectionWrapper>
+  <SectionWrapper id="Second">
       <Container>
         <Grid centered stackable stretched>
             <Grid.Column width={8}>

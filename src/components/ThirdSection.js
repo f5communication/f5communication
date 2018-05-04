@@ -25,11 +25,8 @@ const ThirdSection = ({ texts = {} }) => {
         return accumulateur;
       }, []);
 
-      console.log(result)
-
-
     return (
-        <SectionWrapper>
+        <SectionWrapper id="Third">
             <Container>
               <Grid centered stackable >
                   <Grid.Column width={8}>

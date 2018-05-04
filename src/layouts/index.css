@@ -1,4 +1,9 @@
 
+
+body {
+  margin: 0;
+}
+
 *:not(i){
   font-family: 'Open Sans', sans-serif !important;
 }

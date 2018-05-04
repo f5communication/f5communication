@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade"
 
 const FirstSection = ({ texts = {} }) => {
     return (
-        <SectionWrapper>
+        <SectionWrapper id="First" >
             <Container>
               <Grid centered stackable stretched>
                   <Grid.Column width={16}>

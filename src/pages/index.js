@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet';
+import Measure from 'react-measure';
+import Waypoint from 'react-waypoint';
 
 import Header from '../components/header'
 
@@ -12,65 +14,115 @@ import TeamSection from "../components/TeamSection"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
+class IndexPage extends Component {
+  state = {
+    isTop: false,
+    element: "Home",
+    dimensions: {
+      width: 1280,
+      height: -1
+    }
+  }
 
-const IndexPage = ({ data }) => {
-  const { 
-    background,
-    firstSection,
-    secondSection,
-    thirdSection,
-    teamSection,
-    contactSection
-  } = data
+  toggleTop = () => {
+    if(!this.state.isTop){
+      this.activeElement('Home')
+    }
+    this.setState({ isTop: !this.state.isTop })
+  }
 
-  return(
-    <div>
-      <Helmet>
-        {/* <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta charset="UTF-8"/>
-        <title>{}</title>
-        <meta name="description" content={} />
-        <link rel="icon" href="/images/favicon.png"/>
-        <html lang="fr-FR" prefix="og: http://ogp.me/ns#" />
-        <link rel="profile" href="http://gmpg.org/xfn/11" />
+  activeElement = (element) => this.setState({ element })
 
-        <meta name="description" content={}/>
-        <link rel="canonical" href="http://f5communication.com/" />
-        <meta property="og:locale" content="fr_FR" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={} />
-        <meta property="og:description" content={} />
-        <meta property="og:url" content="http://f5communication.com/" />
-        <meta property="og:site_name" content={} />
+  render(){
+    const { dimensions = {}, isTop, element } = this.state;
+    const { data } = this.props
+    const { width, height } = dimensions
+    const isMobile = width < 785
+    const { 
+      background,
+      firstSection,
+      secondSection,
+      thirdSection,
+      teamSection,
+      contactSection,
+      seo = {}
+    } = data
 
-        <meta property="og:image" content={} />
+    return (
+      <Measure
+        bounds
+        onResize={(contentRect) => {
+          this.setState({ dimensions: contentRect.bounds })
+        }}
+      >
+      {({ measureRef }) => (
+          <div ref={measureRef} >
+            <Helmet>
+              <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet"/>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+              <meta charset="UTF-8"/>
+              <title>{seo.title}</title>
+              <meta name="description" content={seo.description} />
+              <link rel="icon" href="/images/favicon.png"/>
+              <html lang="fr-FR" prefix="og: http://ogp.me/ns#" />
+              <link rel="profile" href="http://gmpg.org/xfn/11" />
 
+              <meta name="description" content={seo.description}/>
+              <link rel="canonical" href="http://f5communication.com/" />
+              <meta property="og:locale" content="fr_FR" />
+              <meta property="og:type" content="website" />
+              <meta property="og:title" content={seo.title} />
+              <meta property="og:description" content={seo.description} />
+              <meta property="og:url" content="http://f5communication.com/" />
+              <meta property="og:site_name" content={seo.title} />
+              <meta property="og:image" content={seo.image} />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content={} />
-        <meta name="twitter:title" content={} />
-        <meta name="twitter:image" content={} />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:description" content={seo.description} />
+              <meta name="twitter:title" content={seo.title} />
+              <meta name="twitter:image" content={seo.image} />
 
-        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-        <link rel='dns-prefetch' href='//s.w.org' />
+              <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+              <link rel='dns-prefetch' href='//s.w.org' />
 
+              <link rel='shortlink' href='http://f5communication.com/' />
 
-        <link rel='shortlink' href='http://f5communication.com/' /> */}
+            </Helmet>
 
-      </Helmet>
+            <Header isMobile={isMobile} isTop={isTop} element={element} />
+            <Waypoint
+              onEnter={this.toggleTop}
+              onLeave={this.toggleTop}
+            />
+            <Landing background={background.sizes} />
+            <Waypoint
+              onEnter={() => this.activeElement('First')}
+            />
+            <FirstSection texts={firstSection}/>
+            <Waypoint
+              onEnter={() => this.activeElement('Second')}
+            />
+            <SecondSection texts={secondSection}/>
+            <Waypoint
+              onEnter={() => this.activeElement('Third')}
+            />
+            <ThirdSection texts={thirdSection} />
+            <Waypoint
+              onEnter={() => this.activeElement('Team')}
+            />
+            <TeamSection texts={teamSection} />
+            <Waypoint
+              onEnter={() => this.activeElement('Contact')}
+            />
+            <Contact texts={contactSection} />
+            <Footer />
+          </div>
+        )}
+      </Measure>
+    )
+  }
 
-      <Header/>
-      
-      <Landing background={background.sizes} />
-      <FirstSection texts={firstSection}/>
-      <SecondSection texts={secondSection}/>
-      <ThirdSection texts={thirdSection} />
-      <TeamSection texts={teamSection} />
-      <Contact texts={contactSection} />
-      <Footer />
-    </div>
-  )
+  
 }
 
 export default IndexPage
@@ -135,6 +187,10 @@ export const query = graphql`
             icon
             url
           }
+        }
+        seo: contentYaml(id: { regex: "/seo/" }) {
+          title
+          description
         }
       }
 `

@@ -8,7 +8,7 @@ const TeamSection = ({ texts = {} }) => {
     const { members = [] } = texts
 
     return (
-        <SectionWrapper>
+        <SectionWrapper id="Team">
             <Container>
               <Grid centered stackable stretched>
                   <Grid.Column width={16}>

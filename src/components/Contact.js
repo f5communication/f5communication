@@ -20,7 +20,7 @@ class Contact extends Component {
         const { revealed } = this.state;
         const { texts } = this.props;
         return (
-            <SectionWrapper>
+            <SectionWrapper id="Contact">
                 <div className="title-band">
                   <Container>
                         <Slide left>
