@@ -5,7 +5,7 @@ import Waypoint from 'react-waypoint';
 import { colors } from "./datas"
 import logo from "../images/logovert.png"
 import styled from "styled-components";
-import Overdrive from 'react-overdrive'
+import Img from "gatsby-image";
 
 
 class Header extends Component {
@@ -17,7 +17,6 @@ class Header extends Component {
 
   render(){
     const { isTop } = this.state;
-    const { siteTitle } = this.props;
 
     return (
       <HeaderWrapper isTop={isTop} className="wrapper">
@@ -28,7 +27,7 @@ class Header extends Component {
         <Menu borderless fixed="top" widths={isTop ? 6 : null} className={ isTop ? "submenu" : null }>
         <Container fluid={!isTop}>
               <Menu.Item className="logo">
-                <Image src="/images/logovert.png" size={isTop ? null : "small"} />
+              <Image src="../images/logovert.png" size={isTop ? null : "small"} />
               </Menu.Item>
               { items.map((item, i) =>(
                 <Menu.Item key={i} position={i === 0 && !isTop ? "right" : null} >
@@ -85,7 +84,8 @@ const HeaderWrapper = styled.div`
       left: 50%;
       transform: translateX(-50%);
       ` : ''}
-      
+
+    }
       img {
         margin-bottom: 0 !important;
       }

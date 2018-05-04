@@ -46,7 +46,7 @@ class Contact extends Component {
                             <h2><ReactRevealText show={revealed}>{texts.email}</ReactRevealText></h2>
                                 <div className="social">
                                 { texts.socials && texts.socials.map((social, i) => (
-                                    <a href={social.url} target="_blank">
+                                    <a href={social.url} key={i} target="_blank">
                                         <Icon name={social.icon} size="large" />
                                     </a>
                                 ))}

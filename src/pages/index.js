@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet';
 
+import Header from '../components/header'
+
 import Landing from "../components/Landing"
 import FirstSection from "../components/FirstSection"
 import SecondSection from "../components/SecondSection"
@@ -21,8 +23,6 @@ const IndexPage = ({ data }) => {
     contactSection
   } = data
 
-  console.log(thirdSection)
-
   return(
     <div>
       <Helmet>
@@ -32,7 +32,10 @@ const IndexPage = ({ data }) => {
         <meta name="description" content="L'agence f5 communication est un collectif de passionnés indépendant proposant des services de communication digitale, community management et événementiel à Toulouse et Paris." />
         <link rel="icon" href="/images/favicon.png"/>
       </Helmet>
-      <Landing background={data.background.sizes} />
+
+      <Header/>
+      
+      <Landing background={background.sizes} />
       <FirstSection texts={firstSection}/>
       <SecondSection texts={secondSection}/>
       <ThirdSection texts={thirdSection} />
