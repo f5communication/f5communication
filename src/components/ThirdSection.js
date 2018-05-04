@@ -41,21 +41,24 @@ const ThirdSection = ({ texts = {} }) => {
                     </Fade>
                   </Grid.Column>
                   <Grid.Column width={8}>
-                  { result.map((array, i) => (
-                        <Fade key={i} delay={(i+1) * 500}>
-                      <Image.Group>
-                        { array.map((partner, i2) => (
-                          <Image 
-                            src={partner.logo} 
-                            key={i2} 
-                            alt={partner.name} 
-                            href={partner.url} 
-                            target="_blank"
-                        />
-                        ))}
-                      </Image.Group>
-                        </Fade>
-                  )) }
+                    <Grid centered >
+                        { partners.map((partner, i) => (
+                        <Grid.Column computer={4} tablet={4} mobile={8} key={i} >
+                            <Fade up delay={i*100} >
+                            <Image 
+                                src={partner.logo} 
+                                style={{
+                                    marginLeft: "50%",
+                                    transform: "translateX(-50%)"
+                                }}
+                                alt={partner.name} 
+                                href={partner.url} 
+                                target="_blank"
+                            />
+                            </Fade>
+                        </Grid.Column>
+                        )) }
+                    </Grid>
                   </Grid.Column>
               </Grid>
             </Container>

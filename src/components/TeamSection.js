@@ -77,31 +77,15 @@ background-color: #fff;
         font-family:"Open Sans", sans-serif;
         font-size:1.6rem !important;
         font-weight:300;
-        height:96px;
         line-height:32px;
         margin-bottom:32px;
-        margin-left:0px;
-        margin-right:0px;
-        margin-top:0px;
         outline-color:rgb(60, 66, 79);
-        outline-style:none;
-        outline-width:0px;
-        padding-bottom:0px;
-        padding-left:0px;
-        padding-right:0px;
-        padding-top:0px;
         text-align:center;
-        width:994px;
         word-wrap:break-word;
-        -webkit-box-direction:normal;
-        -webkit-margin-after:32px;
-        -webkit-margin-before:0px;
-        -webkit-margin-end:0px;
-        -webkit-margin-start:0px;
     }
  }
  .card {
-
+     margin: auto;
     transition: all 100ms ease-in;
     text-align:center;
     .header {

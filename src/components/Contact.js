@@ -62,7 +62,7 @@ class Contact extends Component {
 export default Contact
 
 const SectionWrapper = styled.div`
-background-image: url("/images/backgroundcontact.jpg");
+background-image: url("/assets/backgroundcontact.jpg");
 .title-band{
     background-color: ${colors.main} !important; 
     h2 {
@@ -97,7 +97,6 @@ background-image: url("/images/backgroundcontact.jpg");
     background-color: rgba(255,255,255,0.85) !important; 
     color:rgb(60, 66, 79);
     font-family:Muli, sans-serif;
-    font-size:1.6rem !important;
     font-weight:600;
     line-height:32px;   
     text-align:center;
@@ -109,10 +108,12 @@ background-image: url("/images/backgroundcontact.jpg");
         width: fit-content;
         text-align: center;
         margin: auto;
+        font-size:1.2rem !important;
     }
     .social {
         margin-top: 25px;
         display: flex;
+        font-size:1.6rem !important;
         justify-content: space-around;
     }
 }

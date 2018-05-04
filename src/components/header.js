@@ -5,7 +5,7 @@ import Waypoint from 'react-waypoint';
 import { colors } from "./datas"
 import styled from "styled-components";
 import Img from "gatsby-image";
-import logo from "./logovert.png"
+import logo from "../images/logovert.png"
 
 
 class Header extends Component {
@@ -80,10 +80,10 @@ const HeaderWrapper = styled.div`
       align-items: center;
     ${({ isTop }) => isTop ? `
       position: absolute;
-      top: -70px;
+      top: -50px;
       left: 50%;
       transform: translateX(-50%);
-      ` : ''}
+      ` : ""}
 
     }
       img {

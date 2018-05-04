@@ -1,8 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Social media & événementiel - Communication à Toulouse, Paris & ailleurs',
-    desc: "L'agence f5 communication est un collectif de passionnés indépendant proposant des services de communication digitale, community management et événementiel à Toulouse et Paris."
-  },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
