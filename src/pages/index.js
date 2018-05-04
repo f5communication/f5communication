@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet';
 import Measure from 'react-measure';
 import Waypoint from 'react-waypoint';
+import favicon from "../images/favicon.png"
 
 import Header from '../components/header'
 
@@ -19,7 +20,7 @@ class IndexPage extends Component {
     isTop: false,
     element: "Home",
     dimensions: {
-      width: 1280,
+      width: -1,
       height: -1
     }
   }
@@ -63,7 +64,7 @@ class IndexPage extends Component {
               <meta charset="UTF-8"/>
               <title>{seo.title}</title>
               <meta name="description" content={seo.description} />
-              <link rel="icon" href="/images/favicon.png"/>
+              <link rel="icon" href={favicon}/>
               <html lang="fr-FR" prefix="og: http://ogp.me/ns#" />
               <link rel="profile" href="http://gmpg.org/xfn/11" />
 
@@ -89,7 +90,7 @@ class IndexPage extends Component {
 
             </Helmet>
 
-            <Header isMobile={isMobile} isTop={isTop} element={element} />
+           { width !== -1 && <Header isMobile={isMobile} isTop={isTop} element={element} />}
             <Waypoint
               onEnter={this.toggleTop}
               onLeave={this.toggleTop}

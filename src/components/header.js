@@ -6,10 +6,7 @@ import styled, { keyframes } from 'styled-components';
 import Img from "gatsby-image";
 import logo from "../images/logovert.png"
 import { fadeIn } from 'react-animations';
-import smoothscroll from 'smoothscroll-polyfill';
 const fadeInAnimation = keyframes`${fadeIn}`;
-
-smoothscroll.polyfill();
 
 class Header extends Component {
   state = {
