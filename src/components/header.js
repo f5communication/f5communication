@@ -3,9 +3,9 @@ import { Menu, Image, Container } from 'semantic-ui-react'
 import Link from 'gatsby-link'
 import Waypoint from 'react-waypoint';
 import { colors } from "./datas"
-import logo from "../images/logovert.png"
 import styled from "styled-components";
 import Img from "gatsby-image";
+import logo from "./logovert.png"
 
 
 class Header extends Component {
@@ -27,7 +27,7 @@ class Header extends Component {
         <Menu borderless fixed="top" widths={isTop ? 6 : null} className={ isTop ? "submenu" : null }>
         <Container fluid={!isTop}>
               <Menu.Item className="logo">
-              <Image src="../images/logovert.png" size={isTop ? null : "small"} />
+                <Image src={logo} size={isTop ? null : "small"} />
               </Menu.Item>
               { items.map((item, i) =>(
                 <Menu.Item key={i} position={i === 0 && !isTop ? "right" : null} >
