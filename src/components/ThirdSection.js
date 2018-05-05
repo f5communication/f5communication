@@ -70,6 +70,7 @@ const SectionWrapper = styled.div`
 padding-top: 75px;
 padding-bottom: 75px;
 background-color: #fff;
+overflow-x: hidden;
 
     h1.header{
         font-family: Muli,sans-serif !important;
