@@ -6,31 +6,37 @@ subtitle: >-
 partners:
   - logo: /assets/logo_melee_version_quadri-converti.png
     name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
-  - logo: /assets/logo_melee_version_quadri-converti.png
-    name: La Mêlée
-    url: http://www.lamelee.com/
+    url: 'http://www.lamelee.com/'
+  - logo: /assets/cropped-12.jpg
+    name: Le Starter
+    url: 'https://unurl.com'
+  - logo: /assets/cropped-11.jpg
+    name: K
+    url: K
+  - logo: /assets/cropped-10.jpg
+    name: sunwater
+    url: sunwater
+  - logo: /assets/cropped-9.jpg
+    name: MN2017
+    url: MN2017
+  - logo: /assets/cropped-8.jpg
+    name: mélée numérique
+    url: mélée numérique
+  - logo: /assets/cropped-6.jpg
+    name: mélée live
+    url: mélée live
+  - logo: /assets/cropped-5.jpg
+    name: La cantine toulouse
+    url: La cantine toulouse
+  - logo: /assets/cropped-4.jpg
+    name: Jobstic
+    url: Jobstic
+  - logo: /assets/cropped-3.jpg
+    name: It Days
+    url: It Days
+  - logo: /assets/cropped-2.jpg
+    name: digital place
+    url: digital place
+  - logo: /assets/cropped-1.jpg
+    name: La nuit des réseaux
+    url: La nuit des réseaux
