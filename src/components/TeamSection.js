@@ -10,20 +10,18 @@ const TeamSection = ({ texts = {} }) => {
     return (
         <SectionWrapper id="Team">
             <Container>
+                  <Fade up>
               <Grid centered stackable stretched>
                   <Grid.Column width={16}>
-                  <Fade up>
                   <Header as='h1' textAlign='center' >
                       {texts.title}
                       <Header.Content>
                       {texts.subtitle}
                       </Header.Content>
                   </Header>
-                  </Fade>
                   </Grid.Column>
                   { members && members.map((member, i) => (
                       <Grid.Column width={5} key={i} >
-                      <Fade up>
                             <Card>
                               <Image src={member.image} />
                               <Card.Content>
@@ -45,10 +43,10 @@ const TeamSection = ({ texts = {} }) => {
                                   </a>
                               </Card.Content>
                           </Card>
-                  </Fade>
                       </Grid.Column>
                   ))}
               </Grid>
+                  </Fade>
             </Container>
         </SectionWrapper>
       )

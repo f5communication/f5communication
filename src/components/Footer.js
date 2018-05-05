@@ -38,8 +38,8 @@ const SectionWrapper = styled.div`
 .title-band{
     background-color: ${colors.main} !important; 
     p {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
         color: rgb(60, 66, 79) !important;
         font-size: 1.2rem !important;
         line-height: 3rem !important;
