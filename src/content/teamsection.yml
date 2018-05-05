@@ -6,8 +6,7 @@ subtitle: >-
   votre disposition notre expertise et celle de l’écosystème qui nous entoure,
   pour vous proposer les solutions les mieux adaptées à vos envies.
 members:
-  - image: >-
-      http://f5communication.com/wp-content/uploads/2018/02/cropped-DSC0800-1.jpg
+  - image: /assets/margaux.jpg
     linkedin: 'https://www.linkedin.com/in/margauxarmendariz'
     name: Margaux Armendariz
     title: Co-fondatrice & Chef de projet événementiel
