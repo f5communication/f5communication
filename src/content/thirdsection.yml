@@ -11,32 +11,32 @@ partners:
     name: Le Starter
     url: 'http://www.lestarter.org/'
   - logo: /assets/cropped-11.jpg
-    name: K
-    url: K
+    name: Kawantech
+    url: 'http://www.kawantech.com'
   - logo: /assets/cropped-10.jpg
-    name: sunwater
-    url: sunwater
+    name: Sunwaterlife
+    url: 'http://www.sunwaterlife.com/'
   - logo: /assets/cropped-9.jpg
     name: MN2017
-    url: MN2017
+    url: 'https://www.meleenumerique.com/'
   - logo: /assets/cropped-8.jpg
-    name: mélée numérique
-    url: mélée numérique
+    name: MN2016
+    url: 'https://www.meleenumerique.com/'
   - logo: /assets/cropped-6.jpg
-    name: mélée live
-    url: mélée live
+    name: 'La Mêlée Live '
+    url: 'https://twitter.com/lameleelive?lang=fr'
   - logo: /assets/cropped-5.jpg
-    name: La cantine toulouse
-    url: La cantine toulouse
+    name: La Cantine Toulouse
+    url: 'http://lacantine-toulouse.org/'
   - logo: /assets/cropped-4.jpg
     name: Jobstic
-    url: Jobstic
+    url: 'https://www.jobstic.com/'
   - logo: /assets/cropped-3.jpg
-    name: It Days
-    url: It Days
+    name: Innovation IT Day
+    url: 'https://innovation-itday.fr/'
   - logo: /assets/cropped-2.jpg
-    name: digital place
-    url: digital place
+    name: Digital Place
+    url: 'https://www.digitalplace.fr/'
   - logo: /assets/cropped-1.jpg
-    name: La nuit des réseaux
-    url: La nuit des réseaux
+    name: La Nuit des Réseaux
+    url: 'http://nuit-des-reseaux.com/'
