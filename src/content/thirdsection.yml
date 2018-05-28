@@ -42,7 +42,7 @@ partners:
     url: 'http://nuit-des-reseaux.com/'
   - logo: /assets/2.jpg
     name: LinkNow
-    url: 'https://www.linknow.fr/'
+    url: 'https://www.linknow.fr'
   - logo: /assets/1.jpg
     name: JS&Co
-    url: 'https://jsandco.org/'
+    url: 'https://jsandco.org'
