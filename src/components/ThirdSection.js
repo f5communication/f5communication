@@ -29,7 +29,7 @@ const ThirdSection = ({ texts = {} }) => {
         <SectionWrapper id="Third">
             <Container>
               <Grid centered stackable >
-                  <Grid.Column width={8}>
+                  <Grid.Column width={16}>
                   <Fade left>
                       <Header as='h1'>
                           {texts.title}
@@ -37,7 +37,7 @@ const ThirdSection = ({ texts = {} }) => {
                       <p className="content" dangerouslySetInnerHTML={{__html: texts.subtitle}}/>
                     </Fade>
                   </Grid.Column>
-                  <Grid.Column width={8}>
+                  <Grid.Column width={16}>
                     <Grid centered >
                         { partners.map((partner, i) => (
                         <Grid.Column computer={4} tablet={4} mobile={8} key={i} >
