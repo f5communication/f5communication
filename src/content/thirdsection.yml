@@ -46,3 +46,6 @@ partners:
   - logo: /assets/1.jpg
     name: JS&Co
     url: 'https://jsandco.org'
+  - logo: /assets/logo-itrust.jpg
+    name: ITrust
+    url: 'https://www.itrust.fr/'
