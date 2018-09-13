@@ -3,13 +3,4 @@ subtitle: >-
   Pour un renseignement, pour se rencontrer autour d’un café, pour discuter de
   vos projets, ou simplement pour nous envoyer des mots d’amour.
 email: HELLO@F5COMMUNICATION.COM
-socials:
-  - icon: linkedin square
-    name: LinkedIn
-    url: 'https://www.linkedin.com/company/f5communication/'
-  - icon: twitter square
-    name: Twitter
-    url: 'https://twitter.com/margaux_az'
-  - icon: facebook square
-    name: Facebook
-    url: 'https://twitter.com/margaux_az'
+socials: []
