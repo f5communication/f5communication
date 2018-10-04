@@ -3,4 +3,7 @@ subtitle: >-
   Pour un renseignement, pour se rencontrer autour d’un café, pour discuter de
   vos projets, ou simplement pour nous envoyer des mots d’amour.
 email: HELLO@F5COMMUNICATION.COM
-socials: []
+socials:
+  - icon: linkedin
+    name: LinkedIn
+    url: 'https://www.linkedin.com/company/f5communication/'
