@@ -8,7 +8,7 @@ const Landing = ({ background }) => {
     console.log(background)
     return (
         <Wrapper id="Home">
-            <img src={background} />
+            <Image src={background} />
         </Wrapper>
     )
 }
@@ -16,12 +16,9 @@ const Landing = ({ background }) => {
 export default Landing
 
 const Image = styled.img`
-position: fixed;
-top: 0;
 z-index: -1;
 width: 100vw;
 height: auto;
-min-height: 80vh !important;
 `
 
 const Wrapper = styled.div`
