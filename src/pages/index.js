@@ -95,7 +95,7 @@ class IndexPage extends Component {
            { width !== -1 && <Header isMobile={isMobile} isTop={isTop} element={element} />}
             
             <Waypoint onEnter={this.toggleTop} onLeave={this.toggleTop} />
-            <Landing background={background.sizes} />
+            <Landing background={seo.image} />
             <Waypoint onEnter={() => this.activeElement('First')} />
 
             <FirstSection texts={firstSection}/>
@@ -125,20 +125,6 @@ export default IndexPage
 
 export const query = graphql`
   query LandingPage{
-        background: imageSharp(id: {regex: "/background.jpg/"}) {
-          sizes(maxWidth: 1920) {
-            base64
-            tracedSVG
-            aspectRatio
-            src
-            srcSet
-            srcWebp
-            srcSetWebp
-            sizes
-            originalImg
-            originalName
-          } 
-        }
         firstSection: contentYaml(id: { regex: "/first/" }) {
           title
           subtitle

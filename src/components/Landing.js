@@ -7,7 +7,7 @@ import { images } from "./datas"
 
 const Landing = ({ background }) => (
     <Wrapper id="Home">
-        <Image sizes={background} alt={images.background}  />
+        <img src={background} alt={images.background}  />
     </Wrapper>
 )
 
