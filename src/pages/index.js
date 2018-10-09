@@ -173,6 +173,7 @@ export const query = graphql`
         seo: contentYaml(id: { regex: "/seo/" }) {
           title
           description
+          image
         }
       }
 `

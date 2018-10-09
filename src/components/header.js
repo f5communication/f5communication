@@ -138,7 +138,7 @@ const HeaderWrapper = styled.div`
   .ui.borderless.top.fixed.menu {
     height: 100px !important;
     ${({ isTop }) => isTop ? `
-      background-color: rgba(255,255,255, 0.8);
+      background-color: rgba(255,255,255, 1);
       box-shadow: none !important;
       border-bottom: none;
     height: 200px !important;
