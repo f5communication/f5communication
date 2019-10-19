@@ -13,10 +13,15 @@ cards:
       réseaux sociaux | Impliquer vos participants | Préparer vos événements en
       amont pour attirer les bonnes audiences | Conseiller ou renforcer vos
       équipes
-    icon: bullhorn
-    title: COMMUNITY MANAGEMENT
+    icon: chevron down
+    title: COMMUNITY MANAGEMENT EVENEMENTIEL
   - content: >-
       Vous conseiller et vous accompagner pour la création de vos événements et
       la mise en place de votre communication événementielle
-    icon: glass martini
+    icon: chevron down
     title: EVENEMENTIEL
+  - content: >-
+      Créer et gérer votre image sur les réseaux sociaux | Engager votre
+      communauté
+    icon: chevron down
+    title: COMMUNITY MANAGEMENT
